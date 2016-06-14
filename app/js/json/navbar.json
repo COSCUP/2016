@@ -38,4 +38,12 @@
         },
         "url": "staffs.html"
     }
+
+{
+        "text": {
+            "zh": "部落格",
+            "en": "Blog"
+        },
+        "url": "http://blog.coscup.org/"
+    }
 ]
