@@ -25,7 +25,7 @@ var TbodyDay1 = React.createClass({
                 <tr>
                     <td role="time-col">{time[0]}</td>
                     <td colSpan="2" role="hardcode-col">Opening</td>
-                    <Slot rowSpan="4" data={data["HP1"]} lang={lang} />
+                    <td rowSpan="2" role="empty-slot"></td>
                     <Slot rowSpan="4" data={data["H21"]} lang={lang} />
                     <Slot rowSpan="4" data={data["H31"]} lang={lang} />
                     <Slot rowSpan="4" data={data["H41"]} lang={lang} />
@@ -38,6 +38,7 @@ var TbodyDay1 = React.createClass({
                     <td role="time-col">{time[2]}</td>
                     <Slot data={data["H01"]} lang={lang} />
                     <Slot data={data["H11"]} lang={lang} />
+                    <Slot rowSpan="2" data={data["HP1"]} lang={lang} />
                 </tr>
                 <tr>
                     <td role="time-col">{time[3]}</td>
@@ -48,10 +49,10 @@ var TbodyDay1 = React.createClass({
                     <td role="time-col">{time[4]}</td>
                     <Slot data={data["H03"]} lang={lang} />
                     <Slot data={data["H13"]} lang={lang} />
-                    <Slot rowSpan="3" data={data["HP2"]} lang={lang} />
-                    <Slot rowSpan="3" data={data["H21"]} lang={lang} />
+                    <Slot rowSpan="4" data={data["HP2"]} lang={lang} />
                     <Slot rowSpan="3" data={data["H22"]} lang={lang} />
-                    <Slot rowSpan="3" data={data["H23"]} lang={lang} />
+                    <Slot rowSpan="3" data={data["H32"]} lang={lang} />
+                    <Slot rowSpan="3" data={data["H42"]} lang={lang} />
                 </tr>
                 <tr>
                     <td role="time-col">{time[5]}</td>
@@ -163,16 +164,16 @@ var TimetableGYM = React.createClass({
         return (
             <div role="timetabel-gym">
                 <table>
-                    <TbodyDay1 
-                        data={this.props.data} 
-                        timeData={this.props.timeData["day1"]} 
+                    <TbodyDay1
+                        data={this.props.data}
+                        timeData={this.props.timeData["day1"]}
                         roomData={this.props.roomData}
                         lang={this.state.lang} />
                 </table>
                 <table>
                     <TbodyDay2
-                        data={this.props.data} 
-                        timeData={this.props.timeData["day2"]} 
+                        data={this.props.data}
+                        timeData={this.props.timeData["day2"]}
                         roomData={this.props.roomData}
                         lang={this.state.lang} />
                 </table>
