@@ -1,6 +1,7 @@
 require('lib/requestAnimationFrame.js');
 
 var content = null;
+var clipboard = '';
 var callbacks = [];
 var durations = [];
 
@@ -26,8 +27,12 @@ module.exports = {
     getContent: function() {
         return content;
     },
-    show: function(cont) {
+    getClipboardText: function() {
+        return clipboard;
+    },
+    show: function(cont, clipboardText) {
         content = cont;
+        clipboard = clipboardText || '';
         forward(1);
     },
     close: function() {

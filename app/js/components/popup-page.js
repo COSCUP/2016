@@ -3,12 +3,13 @@ var React    = require('react');
 var ReactDOM = require('react-dom');
 
 // Define popup&close panel process
-var store = require('stores/popup-page.js');
+var Clipboard = require('components/clipboard.js');
+var store     = require('stores/popup-page.js');
 
 // Implement index page
 var Popup = React.createClass({
     getInitialState: function() {
-        return {content: null, cls: ''};
+        return {content: null, cls: '', clipboardText: ''};
     },
     closeHandler: function() {
         store.close();
@@ -16,25 +17,29 @@ var Popup = React.createClass({
     proc0: function() {
         this.setState({
             content: null,
-            cls    : ''
+            cls    : '',
+            clipboardText: ''
         });
     },
     proc1: function() {
         this.setState({
             content: store.getContent(),
-            cls    : 'state1'
+            cls    : 'state1',
+            clipboardText: store.getClipboardText()
         });
     },
     proc2: function() {
         this.setState({
             content: store.getContent(),
-            cls    : 'state2'
+            cls    : 'state2',
+            clipboardText: store.getClipboardText()
         });
     },
     proc3: function() {
         this.setState({
             content: store.getContent(),
-            cls    : 'state3'
+            cls    : 'state3',
+            clipboardText: store.getClipboardText()
         });
     },
     componentDidMount: function() {
@@ -52,6 +57,7 @@ var Popup = React.createClass({
                 <div role="popup-page" className={this.state.cls}>
                     <span role="popup-X" onClick={this.closeHandler}>X</span>
                     <div role="popup-content" dangerouslySetInnerHTML={htmlContent} />
+                    <Clipboard text={this.state.clipboardText}/>
                 </div>
             </div>
         );

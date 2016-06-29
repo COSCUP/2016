@@ -42,8 +42,9 @@ var Slot = React.createClass({
             this.clickHandler();
     },
     clickHandler: function() {
-        var dom = ReactDOM.findDOMNode(this.refs["popup-content-src"]);
-        popup.show(dom.innerHTML);
+        var dom  = ReactDOM.findDOMNode(this.refs["popup-content-src"]);
+        var link = 'http://coscup.org/2016/schedules.html#' + (this.props.data.slot || '');
+        popup.show(dom.innerHTML, link);
     },
     langChangeHandler: function() {
         this.setState({lang: langStore.getState()});

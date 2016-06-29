@@ -76,4 +76,32 @@
     [role="popup-content"] {
         padding    : 4em 0;
     }
+    [role="clipboard"] {
+        display  : block;
+        width    : 80%;
+        margin   : 0 auto 4em auto;
+        border   : 2px solid $color_green_bg;
+        overflow : hidden;
+
+        input {
+            display   : block;
+            font-size : $font_small;
+            padding   : 4px 8px;
+            width     : 100%;
+            border    : 0;
+            color     : #333;
+            background: white;
+        }
+        button {
+            display   : block;
+            font-size : $font_small;
+            padding   : 2px 0;
+            width     : 100%;
+            border    : 0;
+            text-align: center;
+            color     : white;
+            background: $color_green_bg;
+            cursor    : pointer;
+        }
+    }
 }
