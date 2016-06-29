@@ -3,6 +3,7 @@ require('lib/arrayExtended.js');
 var React     = require('react');
 var ReactDOM  = require('react-dom');
 var dom       = require('lib/dom.js');
+var classNames = require('classnames')
 
 // Include dependency
 var navbarDt  = require('json/navbar.json');
@@ -87,26 +88,31 @@ var Links = React.createClass({
 });
 
 var Navbar = React.createClass({
+    coculateHeight: function() {
+        if( !this.props.full )
+            return 'auto';
+        else if( resizer.windowWidth() > 1500 )
+            return (resizer.windowWidth()*0.3) + 'px';
+        else if( resizer.windowWidth() > 900 )
+            return (resizer.windowWidth()*0.45) + 'px';
+        else if( resizer.windowWidth() > 600 )
+            return (resizer.windowWidth()*0.5) + 'px';
+        else
+            return (resizer.windowWidth()*0.7) + 'px';
+    },
+    coculateClassName: function() {
+        var wd = resizer.windowWidth();
+        return classNames({
+            'banner-rwd-1500': wd > 900,
+            'banner-rwd-900' : wd <= 900,
+            'non-full'       : !this.props.full
+        });
+    },
     coculateState: function() {
-        var nState = {
-            height: '20em',
-            cName : ''
+        return {
+            height: this.coculateHeight(),
+            cName : this.coculateClassName()
         };
-        if( resizer.windowWidth() > 1500 )
-            nState.height = (resizer.windowWidth()*0.3) + 'px';
-        else if( resizer.windowWidth() > 900 ) {
-            nState.height = (resizer.windowWidth()*0.45) + 'px';
-            nState.cName  = 'banner-rwd-1500';
-        }
-        else if( resizer.windowWidth() > 600 ) {
-            nState.height = (resizer.windowWidth()*0.5) + 'px';
-            nState.cName  = 'banner-rwd-900';   
-        }
-        else {
-            nState.height = (resizer.windowWidth()*0.7) + 'px';
-            nState.cName  = 'banner-rwd-900';
-        }
-        return nState;
     },
     navbarAdjust: function() {
         var navbarHeight = ReactDOM.findDOMNode(this).offsetHeight;
@@ -143,24 +149,23 @@ var Navbar = React.createClass({
         return (
             <nav role="banner" style={style} className={cName}>
                 <header>
-                    <img role="up-hero-line"
-                         src="images/hero_line.svg" />
-                    <img role="logo" 
-                         src="images/coscup.svg" />
+                    <img role="up-hero-line" src="images/hero_line.svg" />
+                    <img role="logo" src="images/coscup.svg" />
                     <strong>開源人年會</strong>
-                    <img role="slogan"
-                         src="images/main_withslogan.svg" />
+                    {(() => {
+                        if( this.props.full )
+                            return <img role="slogan" src="images/main_withslogan.svg" />;
+                        else return <span />
+                    })()}
 
                     <LangSwitch />
                     
-                    <img role="btn-hero-line"
-                         src="images/hero_line.svg" />                    
+                    <img role="btn-hero-line" src="images/hero_line.svg" />                    
                 </header>
 
                 <section ref="links" role="page-links">
                     <Bugar />
-                    <img role="logo" 
-                         src="images/coscup.svg" />
+                    <img role="logo" src="images/coscup.svg" />
                     <Links />
                     <div role="clear-float"></div>
                 </section>

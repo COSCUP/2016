@@ -28,8 +28,8 @@ div[role="transport-text-info"] {
 
 div[role="transportmap"]{
     height: 600px;
+    padding: 3em;
     @include tablet() {
         height: 300px;
-        padding: 3em;
     }
 }

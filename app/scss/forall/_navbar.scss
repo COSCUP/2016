@@ -6,10 +6,6 @@ nav[role="banner"] {
     display         : block;
     position        : relative;
     font-size       : $font_medium;
-    background-image     : url('../images/coverBG.jpg');
-    background-size      : 100% auto;
-    background-position  : 0% 0%;
-    background-repeat    : no-repeat;
 
     // COSCUP logo, slogan
     & > header {

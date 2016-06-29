@@ -14,10 +14,12 @@ section[role="team-list"] {
         h2 {
             font-size: $font_medium;
             color    : $color_green_bg;
+            text-shadow: 1px 1px white;
         }
         p {
             color     : #333;
             text-align: justify;
+            text-shadow: 1px 1px white;
         }
 
         & ~ div[role="team"] {

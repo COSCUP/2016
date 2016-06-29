@@ -13,7 +13,7 @@ var Main = React.createClass({
     render: function() {
         return (
             <div>
-                <Navbar   />
+                <Navbar   full={true} />
                 <Intro    />
                 <Sponsors />
                 <Footer   />
