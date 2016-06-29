@@ -17,9 +17,13 @@ var Clipboard = React.createClass({
 		}
 	},
     render: function() {
+    	var text  = this.props.text || '';
+    	var style = {
+    		display: (text==='')? 'none' : 'block'
+    	};
         return (
-        	<section role="clipboard">
-        		<input ref="clipboardInput" value={this.props.text} />
+        	<section role="clipboard" style={style} >
+        		<input ref="clipboardInput" value={text} />
         		<button ref="clipboardHelper" onClick={this.clickHandler}>Copy Link</button>
         	</section>
         );
