@@ -1,6 +1,7 @@
 // Include library
 var React     = require('react');
 var ReactDOM  = require('react-dom');
+var classNames = require('classnames');
 
 // Include dependency
 require('lib/arrayExtended.js');
@@ -62,7 +63,10 @@ var Slot = React.createClass({
         var lang    = this.state.lang;
         var colSpan = this.props.colSpan || 1;
         var rowSpan = this.props.rowSpan || 1;
-        var cls     = (this.state.active)? '' : 'unactive';
+        var cls     = classNames({
+            'unactive': !this.state.active,
+            'rwd-only': this.props.rwdOnly
+        });
 
         // Process tags
         if( !this.props.data )
@@ -85,7 +89,7 @@ var Slot = React.createClass({
             <td role="timetable-slot" className={cls}
                 colSpan={colSpan} rowSpan={rowSpan}
                 onClick={this.clickHandler}
-                id={this.props.data.slot}
+                id={(this.props.rwdOnly)? '' : this.props.data.slot}
                 >
 
                 <div className="speaker" alt={alt}>

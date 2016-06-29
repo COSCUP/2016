@@ -168,6 +168,12 @@ section[role="timetable"] {
                 display   : none;
             }
         }
+        td.rwd-only {
+            display: none;
+            @include tablet() {
+                display: block;
+            }
+        }
     }
 }
 

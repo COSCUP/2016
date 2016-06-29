@@ -33,17 +33,27 @@ var TbodyDay1 = React.createClass({
                 <tr>
                     <td role="time-col">{time[1]}</td>
                     <Slot colSpan="2" data={data["K0"]} lang={lang} />
+                    <Slot rwdOnly={true} data={data["H21"]} lang={lang} />
+                    <Slot rwdOnly={true} data={data["H31"]} lang={lang} />
+                    <Slot rwdOnly={true} data={data["H41"]} lang={lang} />
                 </tr>
                 <tr>
                     <td role="time-col">{time[2]}</td>
                     <Slot data={data["H01"]} lang={lang} />
                     <Slot data={data["H11"]} lang={lang} />
                     <Slot rowSpan="2" data={data["HP1"]} lang={lang} />
+                    <Slot rwdOnly={true} data={data["H21"]} lang={lang} />
+                    <Slot rwdOnly={true} data={data["H31"]} lang={lang} />
+                    <Slot rwdOnly={true} data={data["H41"]} lang={lang} />
                 </tr>
                 <tr>
                     <td role="time-col">{time[3]}</td>
                     <Slot data={data["H02"]} lang={lang} />
                     <Slot data={data["H12"]} lang={lang} />
+                    <Slot rwdOnly={true} data={data["HP1"]} lang={lang} />
+                    <Slot rwdOnly={true} data={data["H21"]} lang={lang} />
+                    <Slot rwdOnly={true} data={data["H31"]} lang={lang} />
+                    <Slot rwdOnly={true} data={data["H41"]} lang={lang} />
                 </tr>
                 <tr>
                     <td role="time-col">{time[4]}</td>
@@ -58,15 +68,24 @@ var TbodyDay1 = React.createClass({
                     <td role="time-col">{time[5]}</td>
                     <Slot data={data["H04"]} lang={lang} />
                     <Slot data={data["H14"]} lang={lang} />
+                    <Slot rwdOnly={true} data={data["HP2"]} lang={lang} />
+                    <Slot rwdOnly={true} data={data["H22"]} lang={lang} />
+                    <Slot rwdOnly={true} data={data["H32"]} lang={lang} />
+                    <Slot rwdOnly={true} data={data["H42"]} lang={lang} />
                 </tr>
                 <tr>
                     <td role="time-col">{time[6]}</td>
                     <Slot data={data["H05"]} lang={lang} />
                     <Slot data={data["H15"]} lang={lang} />
+                    <Slot rwdOnly={true} data={data["HP2"]} lang={lang} />
+                    <Slot rwdOnly={true} data={data["H22"]} lang={lang} />
+                    <Slot rwdOnly={true} data={data["H32"]} lang={lang} />
+                    <Slot rwdOnly={true} data={data["H42"]} lang={lang} />
                 </tr>
                 <tr>
                     <td role="time-col">{time[7]}</td>
                     <Slot colSpan="2" data={data["K1"]} lang={lang} />
+                    <Slot rwdOnly={true} data={data["HP2"]} lang={lang} />
                 </tr>
                 <tr>
                     <td role="time-col">{time[8]}</td>
@@ -109,17 +128,26 @@ var TbodyDay2 = React.createClass({
                 <tr>
                     <td role="time-col">{time[1]}</td>
                     <Slot colSpan="2" data={data["K2"]} lang={lang} />
+                    <Slot rwdOnly={true} data={data["H23"]} lang={lang}></Slot>
+                    <Slot rwdOnly={true} data={data["H33"]} lang={lang}></Slot>
+                    <Slot rwdOnly={true} data={data["H43"]} lang={lang}></Slot>
                 </tr>
                 <tr>
                     <td role="time-col">{time[2]}</td>
                     <Slot data={data["H06"]} lang={lang} />
                     <Slot data={data["H16"]} lang={lang} />
                     <Slot rowSpan="2" data={data["HP3"]} lang={lang}/>
+                    <Slot rwdOnly={true} data={data["H23"]} lang={lang}></Slot>
+                    <Slot rwdOnly={true} data={data["H33"]} lang={lang}></Slot>
+                    <Slot rwdOnly={true} data={data["H43"]} lang={lang}></Slot>
                 </tr>
                 <tr>
                     <td role="time-col">{time[3]}</td>
                     <Slot data={data["H07"]} lang={lang} />
                     <Slot data={data["H17"]} lang={lang} />
+                    <Slot rwdOnly={true} data={data["H23"]} lang={lang}></Slot>
+                    <Slot rwdOnly={true} data={data["H33"]} lang={lang}></Slot>
+                    <Slot rwdOnly={true} data={data["H43"]} lang={lang}></Slot>
                 </tr>
                 <tr>
                     <td role="time-col">{time[4]}</td>
@@ -134,9 +162,16 @@ var TbodyDay2 = React.createClass({
                     <td role="time-col">{time[5]}</td>
                     <Slot data={data["H09"]} lang={lang} />
                     <Slot data={data["H19"]} lang={lang} />
+                    <Slot rwdOnly={true} data={data["HP4"]} lang={lang} />
+                    <Slot rwdOnly={true} data={data["H24"]} lang={lang} />
+                    <Slot rwdOnly={true} data={data["H34"]} lang={lang} />
+                    <Slot rwdOnly={true} data={data["H44"]} lang={lang} />
                 </tr>
                 <tr>
                     <td role="time-col">{time[6]}</td>
+                    <Slot rwdOnly={true} data={data["H24"]} lang={lang} />
+                    <Slot rwdOnly={true} data={data["H34"]} lang={lang} />
+                    <Slot rwdOnly={true} data={data["H44"]} lang={lang} />
                 </tr>
                 <tr>
                     <td role="time-col">{time[7]}</td>
