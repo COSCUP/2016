@@ -79,6 +79,7 @@
     [role="clipboard"] {
         display  : block;
         width    : 80%;
+        max-width: 700px;
         margin   : 0 auto 4em auto;
         border   : 2px solid $color_green_bg;
         overflow : hidden;
