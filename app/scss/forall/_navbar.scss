@@ -108,6 +108,18 @@ nav[role="banner"] {
         font-weight : 900;
         z-index     : 999;
 
+        &.rwd {
+            display   : none;
+            margin-top: 0;
+            padding   : 1em 0;
+        }
+        @include tablet() {
+            display: none;
+            &.rwd {
+                display: block;
+            }
+        }
+
         span {
             font-size   : $font_small;
             margin        : 0 1em 0 0;

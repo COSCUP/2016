@@ -3,7 +3,7 @@ require('lib/arrayExtended.js');
 var React     = require('react');
 var ReactDOM  = require('react-dom');
 var dom       = require('lib/dom.js');
-var classNames = require('classnames')
+var classNames = require('classnames');
 
 // Include dependency
 var navbarDt  = require('json/navbar.json');
@@ -18,26 +18,25 @@ var LangSwitch = React.createClass({
     getInitialState: function() {
         return {lang: langStore.getState()};
     },
+    langChangeHandler: function() {
+        this.setState({lang: langStore.getState()});
+    },
     handleClickZH: function() {
-        this.setState({lang: 'zh'});
         langStore.setLang('zh');
     },
     handleClickEN: function() {
-        this.setState({lang: 'en'});
         langStore.setLang('en');
     },
+    componentDidMount: function() {
+        langStore.register(this.langChangeHandler);
+    },
     render: function() {
-        var zhClass = 'unactive';
-        var enClass = 'unactive';
-        switch(this.state.lang) {
-            case 'zh':
-                zhClass = 'active';
-                break;
-            case 'en':
-                enClass = 'active';
-        }
+        var lang = this.state.lang;
+        var zhClass = (lang=='zh')? 'active' : 'unactive';
+        var enClass = (lang=='en')? 'active' : 'unactive';
+        var version = this.props.version || '';
         return (
-            <nav role="lang-switch">
+            <nav role="lang-switch" className={version}>
                 <span onClick={this.handleClickEN}
                         className={enClass}>
                     EN
@@ -82,6 +81,7 @@ var Links = React.createClass({
         return (
             <ul>
                 {lis}
+                <LangSwitch version="rwd" />
             </ul>
         );
     }
