@@ -30,9 +30,6 @@ var TransportMap = React.createClass({
         });
         return (
             <div>
-                <div role="transportmap">
-                    <iframe width="100%" height="100%" frameBorder="0" src="http://umap.openstreetmap.fr/zh-tw/map/ubike_88883?scaleControl=true&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=false&datalayersControl=false&onLoadPanel=undefined&captionBar=false#14/25.0423/121.6128"></iframe>
-                </div>
                 <div role="transport-text-info">
                     <section role="transport">
                         <h3 role="title">{TransportJsonDt.location.title[lang]}</h3>
@@ -46,6 +43,9 @@ var TransportMap = React.createClass({
                         <h3 role="title">{TransportJsonDt.suggestion[lang]}</h3>
                     </section>
                     {lis}
+                </div>
+                <div role="transportmap">
+                    <iframe width="100%" height="100%" frameBorder="0" src="http://umap.openstreetmap.fr/zh-tw/map/ubike_88883?scaleControl=true&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=false&datalayersControl=false&onLoadPanel=undefined&captionBar=false#14/25.0423/121.6128"></iframe>
                 </div>
             </div>
         );
