@@ -34,12 +34,7 @@ section[role="footer-sponsor"] {
 
         a {
             display     : inline-block;
-            opacity     : .5;
-            transition  : opacity 300ms;
 
-            &:hover {
-                opacity : 1;
-            }
             &[href=""] {
                 cursor        : default;
                 pointer-events: none;
@@ -52,8 +47,9 @@ section[role="footer-sponsor"] {
             }
         }
         p {
+            display    : none;
             text-align : center;
-            color      : $color_gray;
+            color      : #333;
         }
     }
 }

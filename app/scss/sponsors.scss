@@ -31,12 +31,6 @@ section[role="sponsor"] {
 
         a {
             display: inline-block;
-            opacity: .8;
-            transition: opacity 500ms $time_quartic;
-
-            &:hover {
-                opacity: 1;
-            }
         }
         img {
             width: 100%;
@@ -58,6 +52,15 @@ section[role="sponsor"] {
         }
         & > article {
             line-height: 1.6em;
+
+            ul {
+                padding-left: 2em;
+            }
+            a {
+                color: $color_green_bg;
+                text-decoration: underline;
+                cursor: pointer;
+            }
         }
         @media (max-width: 900px){
             padding: 3em;
