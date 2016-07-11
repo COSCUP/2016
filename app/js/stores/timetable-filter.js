@@ -3,7 +3,7 @@ var loader = require('dataloaders/schedules-filter.js');
 var types  = {};
 
 var placesData = [
-    {id: 0, en: "Academia Sinica", zh: "人文館"},
+    {id: 0, en: "H.S.S. Building", zh: "人文館"},
     {id: 1, en: "Activity Center", zh: "活動中心"}
 ];
 
