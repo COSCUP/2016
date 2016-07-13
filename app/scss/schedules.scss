@@ -53,7 +53,6 @@ section[role="timetable"] {
             font-size    : $font_base;
             text-align   : center;
             background   : white;
-            color        : #333;
             transition   : opacity 300ms $time_quartic;
             position: relative;
 
@@ -359,7 +358,6 @@ div.tags {
     }
     article {
         font-size: $font_base;
-        color    : #333;
         line-height: 1.6em;
         text-align : justify;
     }
