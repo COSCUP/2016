@@ -41,7 +41,10 @@ section[role="footer-sponsor"] {
             }
         }
         img {
-            max-width  : 300px;
+            max-width  : 140px;
+            padding    : 0 1em;
+            border     : 1px solid #eeeeee;
+            border-radius: .2em;
             @include tablet() {
                 width     : 100%;
             }
