@@ -11,6 +11,7 @@ var Content = React.createClass({
     render: function() {
         var data = this.props.data || {};
         var speakerintro = markup(data.speakerintro || '');
+        var abstract = markup(data.abstract || '');
         return (
             <section role="timetable-popup-content">
                 <header>
@@ -19,7 +20,7 @@ var Content = React.createClass({
                 </header>
                 <footer>
                     <strong>{data.subject}</strong>
-                    <article>{data.abstract}</article>
+                    <article dangerouslySetInnerHTML={abstract} />
                 </footer>
             </section>
         );
