@@ -63,7 +63,7 @@ var TbodyDay1 = React.createClass({
                 </tr>
                 <tr>
                     <td role="time-col">{time[8]}</td>
-                    <td colSpan="3" role="hardcode-col">Lighting Talk</td>
+                    <td colSpan="3" role="hardcode-col">Lightning Talk</td>
                 </tr>
                 <tr>
                     <td role="time-col">{time[9]}</td>
@@ -135,7 +135,7 @@ var TbodyDay2 = React.createClass({
                 </tr>
                 <tr>
                     <td role="time-col">{time[7]}</td>
-                    <td colSpan="3" role="hardcode-col">Lighting Talk</td>
+                    <td colSpan="3" role="hardcode-col">Lightning Talk</td>
                 </tr>
                 <tr>
                     <td role="time-col">{time[8]}</td>
