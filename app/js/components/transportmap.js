@@ -21,7 +21,7 @@ var TransportMap = React.createClass({
         var lang = this.state.lang;
         var lis  = TransportJsonDt.transport.map(function(transport, id) {
             return (
-                <section role="transport">
+                <section role="transport" key={id}>
                     <h3 role="title">{transport.title[lang]}
                     </h3>
                     <div role="content">{transport.content[lang]}</div>

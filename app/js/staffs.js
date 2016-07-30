@@ -25,7 +25,7 @@ var Team = React.createClass({
 var Main = React.createClass({
     render: function() {
         var staffs = pageText.map(function(team, idx) {
-            return <Team data={team} />;
+            return <Team data={team} key={idx} />;
         });
         return (
             <div>

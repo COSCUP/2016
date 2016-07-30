@@ -1,6 +1,5 @@
 // Include library
 var React    = require('react');
-var ReactDOM = require('react-dom');
 
 // Define popup&close panel process
 var Clipboard = require('components/clipboard.js');

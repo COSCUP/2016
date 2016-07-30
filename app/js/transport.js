@@ -7,7 +7,7 @@ var Navbar       = require('components/navbar.js');
 var Seperator    = require('components/seperator.js');
 var TransportMap = require('components/transportmap.js')
 var Sponsors     = require('components/footer-sponsor.js');
-var Footer       = require('components/footer.js');;
+var Footer       = require('components/footer.js');
 
 // Implement index page
 var Main = React.createClass({

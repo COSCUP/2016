@@ -2,7 +2,6 @@
 require('lib/arrayExtended.js');
 var React     = require('react');
 var ReactDOM  = require('react-dom');
-var dom       = require('lib/dom.js');
 var classNames = require('classnames');
 
 // Include dependency

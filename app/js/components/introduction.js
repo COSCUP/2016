@@ -18,8 +18,9 @@ var Activity  = React.createClass({
     render: function() {
         var lContent = [];
         var rContent = [];
+        var article;
         if( this.props.left ) {
-            var article = markup(this.props.left.article);
+            article = markup(this.props.left.article);
             lContent.push(<h2>{this.props.left.title}</h2>);
             lContent.push(<p dangerouslySetInnerHTML={article} />);
             lContent.push(  <a role="link-btn"
@@ -29,7 +30,7 @@ var Activity  = React.createClass({
                             </a>);
         }
         if( this.props.right ) {
-            var article = markup(this.props.right.article);
+            article = markup(this.props.right.article);
             rContent.push(<h2>{this.props.right.title}</h2>);
             rContent.push(<p dangerouslySetInnerHTML={article} />);
             rContent.push(  <a role="link-btn"

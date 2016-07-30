@@ -14,7 +14,7 @@ var PlaceBtn = React.createClass({
     getInitialState: function() {
         return {active: this.needActive()};
     },
-    changeHandler: function(nowPlace) {
+    changeHandler: function() {
         this.setState({active: this.needActive()});
     },
     componentDidMount: function() {
@@ -42,7 +42,7 @@ var FilterBtn = React.createClass({
     getInitialState: function() {
         return {active: this.needActive()};
     },
-    changeHandler: function(nowPlace) {
+    changeHandler: function() {
         if( this.state.active != this.needActive() )
             this.setState({active: this.needActive()});
     },
