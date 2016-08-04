@@ -11,6 +11,7 @@ var TbodyDay1 = React.createClass({
         var data = this.props.data;
         var time = this.props.timeData;
         var room = this.props.roomData;
+        var lightning = this.props.lightningData || [];
         return (
             <tbody>
                 <tr>
@@ -89,7 +90,10 @@ var TbodyDay1 = React.createClass({
                 </tr>
                 <tr>
                     <td role="time-col">{time[8]}</td>
-                    <td colSpan="2" role="hardcode-col">Lightning Talk</td>
+                    <td colSpan="2" role="hardcode-col">
+                        Lightning Talk
+                        {this.props.lightningTalks}
+                    </td>
                 </tr>
                 <tr>
                     <td role="time-col">{time[9]}</td>
@@ -106,6 +110,7 @@ var TbodyDay2 = React.createClass({
         var data = this.props.data;
         var time = this.props.timeData;
         var room = this.props.roomData;
+        var lightning = this.props.lightningData || [];
         return (
             <tbody>
                 <tr>
@@ -203,14 +208,16 @@ var TimetableGYM = React.createClass({
                         data={this.props.data}
                         timeData={this.props.timeData["day1"]}
                         roomData={this.props.roomData}
-                        lang={this.state.lang} />
+                        lang={this.state.lang}
+                        lightningTalks={this.props.lightningData.day1} />
                 </table>
                 <table>
                     <TbodyDay2
                         data={this.props.data}
                         timeData={this.props.timeData["day2"]}
                         roomData={this.props.roomData}
-                        lang={this.state.lang} />
+                        lang={this.state.lang}
+                        lightningTalks={this.props.lightningData.day2} />
                 </table>
             </div>
         );

@@ -10,6 +10,30 @@ var typeStore       = require('stores/timetable-filter.js');
 
 var loader   = require('dataloaders/schedules.js');
 var timeData = require('json/time.json');
+var lightningData = require('json/lightning.json');
+
+lightningData.day1 = lightningData.day1.map((talk) => {
+    if( talk.speaker.trim() !== '' )
+        return (
+            <p className="lightning-talk">
+                <span className="speaker">{talk.speaker}</span>
+                <span>{talk.topic}</span>
+            </p>
+        );
+    else
+        return <span />;
+});
+lightningData.day2 = lightningData.day2.map((talk) => {
+    if( talk.speaker.trim() !== '' )
+        return (
+            <p className="lightning-talk">
+                <span className="speaker">{talk.speaker}</span>
+                <span>{talk.topic}</span>
+            </p>
+        );
+    else
+        return <span />;
+});
 
 // Implement index page
 var Timetable = React.createClass({
@@ -40,11 +64,13 @@ var Timetable = React.createClass({
                 <TimetableHSSB ref="hssb"
                     data={loader.getHssbData()}
                     timeData={timeData}
-                    roomData={loader.getHssbRoom()} />
+                    roomData={loader.getHssbRoom()}
+                    lightningData={lightningData} />
                 <TimetableGYM  ref="gym"
                     data={loader.getGymData()} 
                     timeData={timeData}
-                    roomData={loader.getGymRoom()} />
+                    roomData={loader.getGymRoom()}
+                    lightningData={lightningData} />
             </section>
         );
     }

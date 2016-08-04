@@ -63,7 +63,10 @@ var TbodyDay1 = React.createClass({
                 </tr>
                 <tr>
                     <td role="time-col">{time[8]}</td>
-                    <td colSpan="3" role="hardcode-col">Lightning Talk</td>
+                    <td colSpan="3" role="hardcode-col">
+                        Lightning Talk
+                        {this.props.lightningTalks}
+                    </td>
                 </tr>
                 <tr>
                     <td role="time-col">{time[9]}</td>
@@ -135,7 +138,10 @@ var TbodyDay2 = React.createClass({
                 </tr>
                 <tr>
                     <td role="time-col">{time[7]}</td>
-                    <td colSpan="3" role="hardcode-col">Lightning Talk</td>
+                    <td colSpan="3" role="hardcode-col">
+                        Lightning Talk
+                        {this.props.lightningTalks}
+                    </td>
                 </tr>
                 <tr>
                     <td role="time-col">{time[8]}</td>
@@ -165,14 +171,16 @@ var TimetableHSSB = React.createClass({
                         data={this.props.data} 
                         timeData={this.props.timeData["day1"]} 
                         roomData={this.props.roomData}
-                        lang={this.state.lang} />
+                        lang={this.state.lang}
+                        lightningTalks={this.props.lightningData.day1} />
                 </table>
                 <table>
                     <TbodyDay2
                         data={this.props.data} 
                         timeData={this.props.timeData["day2"]} 
                         roomData={this.props.roomData}
-                        lang={this.state.lang} />
+                        lang={this.state.lang}
+                        lightningTalks={this.props.lightningData.day2} />
                 </table>
             </div>
         );
