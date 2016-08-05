@@ -55,6 +55,8 @@ nav[role="banner"] {
         border-bottom: $color_green_bg 1px solid;
         background  : white;
         background  : rgba(255,255,255,.8);
+        -webkit-backdrop-filter: saturate(180%) blur(20px);
+        backdrop-filter: saturate(180%) blur(20px);
 
         img[role="logo"] {
             display     : none;
