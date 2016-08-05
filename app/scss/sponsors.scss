@@ -18,6 +18,13 @@ section[role="sponsor-class"] {
     & ~ & {
         margin-top: 6em;
     }
+
+    [role="special-thank"] {
+        p {
+            padding-top: .5em;
+            line-height: 1.4em;
+        }
+    }
 }
 
 section[role="sponsor"] {

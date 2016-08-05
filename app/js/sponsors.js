@@ -10,6 +10,8 @@ var Seperator = require('components/seperator.js');
 var langStore = require('stores/lang.js');
 var loader    = require('dataloaders/sponsor.js');
 
+var specialthank = require('json/special-thank.json');
+
 function markup(text) {
     var md       = new Remarkable();
     var markdown = md.render(text);
@@ -47,7 +49,7 @@ var SponsorClass = React.createClass({
         var sponsors = data.sponsors.map(function(sponsor, idx) {
             return (
                 <Sponsor
-                    key={idx} 
+                    key={sponsor.name['en']} 
                     data={sponsor}
                     lang={lang} />
             );
@@ -56,6 +58,24 @@ var SponsorClass = React.createClass({
             <section role="sponsor-class">
                 <header>{data.className[lang]}</header>
                 {sponsors}
+            </section>
+        );
+    }
+});
+
+var SpecialthankClass = React.createClass({
+    render: function() {
+        var lang = this.props.lang;
+        return (
+            <section role="sponsor-class">
+                <header>{specialthank.header[lang]}</header>
+
+                <article role="special-thank">
+                    {specialthank.contents[lang].map((content, idx)=>{
+                        return <p key={lang + idx}>{content}</p>
+                    })}
+                    <p>{specialthank.list}</p>
+                </article>
             </section>
         );
     }
@@ -86,6 +106,7 @@ var Sponsorlist = React.createClass({
                     lang={lang} />
             );
         });
+        levels.splice(6, 0, <SpecialthankClass lang={lang} />);
         return (
             <section role="sponsor-list">
                 {levels}
