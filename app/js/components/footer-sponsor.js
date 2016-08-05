@@ -6,6 +6,8 @@ var Seperator = require('components/seperator.js');
 var loader    = require('dataloaders/sponsor.js');
 var langStore = require('stores/lang.js');
 
+var specialthank = require('json/special-thank.json');
+
 // Implement
 var Sponsor = React.createClass({
     render: function() {
@@ -49,6 +51,29 @@ var SponsorClass = React.createClass({
     }
 });
 
+var SpecialthankClass = React.createClass({
+    getInitialState: function() {
+        return {lang: langStore.getState()};
+    },
+    changeHandler: function() {
+        this.setState({lang: langStore.getState()});
+    },
+    componentDidMount: function() {
+        langStore.register(this.changeHandler);
+    },
+    render: function() {
+        var lang = this.state.lang;
+        return (
+            <section role="special-thank-footer">
+                <header role="sponsor-class">
+                    {specialthank.header[lang]}
+                </header>
+                <a href="sponsors.html#special-thank">{specialthank.footer[lang]}</a>
+            </section>
+        );
+    }
+});
+
 var FooterSponsor = React.createClass({
     getInitialState: function() {
         return {loaded: false};
@@ -64,6 +89,7 @@ var FooterSponsor = React.createClass({
         var spnsCls = datas.map((dt, id) => {
             return (<SponsorClass key={id} data={dt} />)
         });
+        spnsCls.splice(6, 0, <SpecialthankClass />);
         return (
             <section role="footer-sponsor">
                 {spnsCls}

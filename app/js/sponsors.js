@@ -64,11 +64,15 @@ var SponsorClass = React.createClass({
 });
 
 var SpecialthankClass = React.createClass({
+    componentDidMount: function() {
+        if( location.hash === '#special-thank' )
+            ReactDOM.findDOMNode(this).scrollIntoView({behavior: "smooth"});
+    },
     render: function() {
         var lang = this.props.lang;
         return (
             <section role="sponsor-class">
-                <header>{specialthank.header[lang]}</header>
+                <header ref="special-thank">{specialthank.header[lang]}</header>
 
                 <article role="special-thank">
                     {specialthank.contents[lang].map((content, idx)=>{

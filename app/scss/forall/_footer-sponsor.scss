@@ -55,4 +55,12 @@ section[role="footer-sponsor"] {
             color      : #333;
         }
     }
+
+    [role="special-thank-footer"] {
+        a {
+           color: #8cbf80;
+           cursor: pointer;
+           text-decoration: underline; 
+        }
+    }
 }
