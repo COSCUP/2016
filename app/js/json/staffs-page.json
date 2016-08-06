@@ -35,7 +35,6 @@
             "雁子",
             "Gent",
             "Muka",
-            "RSChiang",
             "Snake",
             "Violet阿紫",
             "Wayne",
@@ -152,7 +151,6 @@
             "牙牙",
             "Arvin",
             "CJOKER",
-            "大助",
             "Can",
             "Chuck",
             "Hiram",
@@ -193,6 +191,7 @@
             "nfsnfs",
             "BobChao",
             "GDH",
+            "Kaichih",
             "Lora",
             "Toby",
             "Yihung",
@@ -200,7 +199,14 @@
             "piper",
             "yingjy",
             "小草",
-			"PCC"
+            "PCC"
+        ]
+    },
+
+    {
+        "team": "公關組",
+        "members": [
+            "RSChiang"
         ]
     },
 
