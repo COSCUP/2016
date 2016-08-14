@@ -86,13 +86,13 @@ function procProgData(progData) {
     procFinal();
 }
 
-ajax.get('http://coscup.org/2016-assets/json/room.json')
+ajax.get('//coscup.org/2016-assets/json/room.json')
     .end(function(err, res) {
         var roomData = JSON.parse(res.text);
         procRoomData(roomData);
     }.bind(this));
 
-ajax.get('http://coscup.org/2016-assets/json/program.json')
+ajax.get('//coscup.org/2016-assets/json/program.json')
     .end(function(err, res) {
         var progData = JSON.parse(res.text);
         procProgData(progData);

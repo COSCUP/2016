@@ -25,7 +25,7 @@ function equilJoin(slotData, spnsData) {
                 "zh": ele.namezh
             },
             "url": ele.logolink,
-            "logoUrl": ' http://coscup.org'+ele.logourl,
+            "logoUrl": '//coscup.org'+ele.logourl,
             "description": {
                 "en": ele.introen,
                 "zh": ele.introzh
@@ -49,13 +49,13 @@ function procData() {
     callbacks = [];
 }
 
-ajax.get('http://coscup.org/2016-assets/json/sponsor.json')
+ajax.get('//coscup.org/2016-assets/json/sponsor.json')
     .end(function(err, res1) {
         spnsData = JSON.parse(res1.text);
         procData();
     }.bind(this));
 
-ajax.get('http://coscup.org/2016-assets/json/level.json')
+ajax.get('//coscup.org/2016-assets/json/level.json')
     .end(function(err, res2){
         slotData = JSON.parse(res2.text);
         procData();

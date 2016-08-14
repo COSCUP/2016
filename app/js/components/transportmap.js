@@ -45,7 +45,7 @@ var TransportMap = React.createClass({
                     {lis}
                 </div>
                 <div role="transportmap">
-                    <iframe width="100%" height="100%" frameBorder="0" src="http://umap.openstreetmap.fr/zh-tw/map/ubike_88883?scaleControl=true&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=false&datalayersControl=false&onLoadPanel=undefined&captionBar=false#14/25.0423/121.6128"></iframe>
+                    <iframe width="100%" height="100%" frameBorder="0" src="//umap.openstreetmap.fr/zh-tw/map/ubike_88883?scaleControl=true&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=false&datalayersControl=false&onLoadPanel=undefined&captionBar=false#14/25.0423/121.6128"></iframe>
                 </div>
             </div>
         );
