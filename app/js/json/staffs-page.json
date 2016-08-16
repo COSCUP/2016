@@ -35,7 +35,6 @@
             "雁子",
             "Gent",
             "Muka",
-            "RSChiang",
             "Snake",
             "Violet阿紫",
             "Wayne",
@@ -67,7 +66,6 @@
             "大維",
             "Angus",
             "裸男(Joe Hung)",
-            "海豹",
             "Angelboy",
             "Beta",
             "Elvis",
@@ -104,13 +102,13 @@
             "友誠",
             "啊正",
             "喬巴",
+            "大倫",
             "小政",
             "小鮮肉",
             "沙士",
+            "海豹",
             "球魚",
             "阿侖",
-            "零葉",
-            "鼎鈞",
             "龍貓",
             "小福",
             "Emma",
@@ -154,7 +152,6 @@
             "牙牙",
             "Arvin",
             "CJOKER",
-            "大助",
             "Can",
             "Chuck",
             "Hiram",
@@ -195,6 +192,7 @@
             "nfsnfs",
             "BobChao",
             "GDH",
+            "Kaichih",
             "Lora",
             "Toby",
             "Yihung",
@@ -202,7 +200,14 @@
             "piper",
             "yingjy",
             "小草",
-			"PCC"
+            "PCC"
+        ]
+    },
+
+    {
+        "team": "公關組",
+        "members": [
+            "RSChiang"
         ]
     },
 
